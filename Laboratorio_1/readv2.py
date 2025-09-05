@@ -309,7 +309,7 @@ def analizar_todas_las_combinaciones(mensaje_cifrado):
     print(f"{Colors.GREEN}{Colors.BOLD}🎯 MENSAJE MÁS PROBABLE (IDENTIFICADO POR IA):{Colors.END}")
     print(f"{Colors.GREEN}{Colors.BOLD}Desplazamiento: {mejor_resultado['desplazamiento']}{Colors.END}")
     print(f"{Colors.GREEN}{Colors.BOLD}Texto descifrado: '{mejor_resultado['texto']}'{Colors.END}")
-    print(f"{Colors.GREEN}{Colors.BOLD}Puntuación de IA: {mejor_resultado['puntuacion']:.1f}{Colors.END}")
+    
     
     # Mostrar estadísticas de optimización
   
