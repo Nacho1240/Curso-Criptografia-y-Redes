@@ -10,7 +10,7 @@ import struct
 import time
 import random
 import sys
-import os
+
 
 def calculate_checksum(data):
     """Calcula el checksum para el paquete ICMP"""
@@ -126,7 +126,7 @@ def send_final_ping(sock, target_ip, identifier, last_sequence):
 def main():
     """Función principal del programa"""
     # Verificar argumentos
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 2:
         print("Uso: sudo python3 icmp_sender.py \"texto_cifrado\" ")
         print("Ejemplo: sudo python3 icmp_sender.py \"lajyezdpnkjn\" ")
         sys.exit(1)
